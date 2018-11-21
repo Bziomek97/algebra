@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Vector3D {
+public class Vector3D implements Algebra{
 
     double x,y,z;
 
@@ -32,5 +32,9 @@ public class Vector3D {
         tmp.add(z*vector.getX()-x*vector.getZ());
         tmp.add(x*vector.getY()-y*vector.getX());
         return tmp;
+    }
+
+    public double abs(){
+        return Math.sqrt(Math.pow(x,2)+Math.pow(y,2)+Math.pow(z,2));
     }
 }
